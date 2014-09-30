@@ -1,0 +1,16 @@
+= simple_form_for(@empresa) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cnpj , label: 'CNPJ'
+    = f.input :nome
+    = f.input :endereco , label: 'Endereço'
+    = f.input :complemento
+    = f.input :numero , label: 'Número'
+    = f.input :bairro
+    = f.input :cidade
+    = f.input :estado
+    = f.input :cep , label: 'CEP'
+
+  .form-actions
+    = f.button :submit, 'Salvar'

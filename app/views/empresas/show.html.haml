@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b CNPJ:
+  = @empresa.cnpj
+%p
+  %b Nome:
+  = @empresa.nome
+%p
+  %b Endereço:
+  = @empresa.endereco
+%p
+  %b Complemento:
+  = @empresa.complemento
+%p
+  %b Número:
+  = @empresa.numero
+%p
+  %b Bairro:
+  = @empresa.bairro
+%p
+  %b Cidade:
+  = @empresa.cidade
+%p
+  %b Estado:
+  = @empresa.estado
+%p
+  %b CEP:
+  = @empresa.cep
+
+= link_to 'Edit', edit_empresa_path(@empresa)
+\|
+= link_to 'Back', empresas_path
