@@ -5,36 +5,60 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
+gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails', '~> 3.1.1'
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'jquery-turbolinks'
+gem 'jbuilder', '~> 1.2'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'less', '~> 2.5.0'
+gem 'less-rails', '~> 2.5.0'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'devise', '~> 3.3.0'
+gem 'cancancan', '~> 1.9.2'
+gem 'simple_form', '~> 3.0.1'
+gem 'haml-rails', '~> 0.5.3'
+gem 'inherited_resources', '~> 1.5.0'
+gem 'rb-readline'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'exception_notification', '~> 4.0.1'
+gem 'brdinheiro', '~> 3.3.0'
+gem 'brstring', '~> 3.3.0'
+gem 'brcep', '~> 3.3.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'maskedinput-rails'
+# A versao mais recente tem um bug, ver
+# https://github.com/net-ssh/net-ssh/issues/145
+gem 'net-ssh', '2.7.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# gem 'spreadsheet', '~> 0.9.7'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'cocoon', '~> 1.2.6'
+
+group :doc do
+  gem 'sdoc', require: false
+end
+
+group :development, :test do
+  gem 'capybara', '~> 2.4.1'
+  gem 'poltergeist', '~> 1.5.0'
+  gem 'rspec-rails', '~> 3.0.2'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'launchy', '~> 2.4.2'
+  gem 'valid_attribute', '~> 2.0.0'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'rspec-collection_matchers'
+  gem 'faker'
+  gem 'selenium-webdriver'
+end
+
+group :development do
+  gem 'capistrano', '~> 2.15.5'
+#  gem 'capistrano', '~> 3.0', require: false
+#  gem 'capistrano-rails', '~> 1.1', require: false
+#  gem 'capistrano-bundler', '~> 1.1', require: false
+end
 
