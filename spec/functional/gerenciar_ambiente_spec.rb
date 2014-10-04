@@ -2,37 +2,37 @@
 
 require 'rails_helper'
 
-feature 'gerenciar Empresa' do
+feature 'gerenciar Ambiente' do
 
-    scenario 'incluir Empresa' do #, :js => true  do
+    scenario 'incluir Ambiente' do #, :js => true  do
 
-        visit new_empresa_path
+        visit new_ambiente_path
 
-        preencher_e_verificar_empresa
+        preencher_e_verificar_ambiente
     end
 
-    scenario 'alterar Empresa' do#, :js => true  do
+    scenario 'alterar Ambiente' do#, :js => true  do
 
-        empresa = FactoryGirl.create(:empresa)
+        ambiente = FactoryGirl.create(:ambiente)
 
-        visit edit_empresa_path(empresa)
+        visit edit_ambiente_path(ambiente)
 
-        preencher_e_verificar_empresa
+        preencher_e_verificar_ambiente
     end
 
-    scenario 'excluir Empresa' do #, :js => true do
+    scenario 'excluir Ambiente' do #, :js => true do
 
-        empresa = FactoryGirl.create(:empresa)
+        ambiente = FactoryGirl.create(:ambiente)
 
-        visit empresas_path
+        visit ambientes_path
 
         click_link 'Excluir'
     end
 
-    def preencher_e_verificar_empresa
+    def preencher_e_verificar_ambiente
 
-        fill_in 'CNPJ',  :with => "CNPJ"
-        fill_in 'Nome', :with => "Empresa"
+        fill_in 'Nome', :with => "Ambiente"
+        fill_in 'Capacidade', :with => "20"
         fill_in 'Endereço',  :with => "Endereço"
         fill_in 'Complemento',  :with => "Complemento"
         fill_in 'Número', :with => "1"
@@ -43,8 +43,8 @@ feature 'gerenciar Empresa' do
 
         click_button 'Salvar'
 
-        expect(page).to have_content 'CNPJ: CNPJ'
-        expect(page).to have_content 'Nome: Empresa'
+        expect(page).to have_content 'Nome: Ambiente'
+        expect(page).to have_content 'Capacidade: 20'
         expect(page).to have_content 'Endereço: Endereço'
         expect(page).to have_content 'Complemento: Complemento'
         expect(page).to have_content 'Número: 1'

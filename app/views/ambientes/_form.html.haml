@@ -1,0 +1,16 @@
+= simple_form_for(@ambiente) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :capacidade
+    = f.input :endereco , label: 'Endereço'
+    = f.input :complemento
+    = f.input :numero , label: 'Número'
+    = f.input :bairro
+    = f.input :cidade
+    = f.input :estado
+    = f.input :cep , label: 'CEP'
+
+  .form-actions
+    = f.button :submit, 'Salvar'

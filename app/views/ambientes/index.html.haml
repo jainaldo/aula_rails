@@ -1,0 +1,35 @@
+%h1 Listing ambientes
+
+%table
+  %tr
+    %th Nome
+    %th Capacidade
+    %th Endereco
+    %th Complemento
+    %th Numero
+    %th Bairro
+    %th Cidade
+    %th Estado
+    %th Cep
+    %th
+    %th
+    %th
+
+  - @ambientes.each do |ambiente|
+    %tr
+      %td= ambiente.nome
+      %td= ambiente.capacidade
+      %td= ambiente.endereco
+      %td= ambiente.complemento
+      %td= ambiente.numero
+      %td= ambiente.bairro
+      %td= ambiente.cidade
+      %td= ambiente.estado
+      %td= ambiente.cep
+      %td= link_to 'Show', ambiente
+      %td= link_to 'Edit', edit_ambiente_path(ambiente)
+      %td= link_to 'Excluir', ambiente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ambiente', new_ambiente_path

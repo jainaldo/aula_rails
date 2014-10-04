@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @ambiente.nome
+%p
+  %b Capacidade:
+  = @ambiente.capacidade
+%p
+  %b Endereço:
+  = @ambiente.endereco
+%p
+  %b Complemento:
+  = @ambiente.complemento
+%p
+  %b Número:
+  = @ambiente.numero
+%p
+  %b Bairro:
+  = @ambiente.bairro
+%p
+  %b Cidade:
+  = @ambiente.cidade
+%p
+  %b Estado:
+  = @ambiente.estado
+%p
+  %b CEP:
+  = @ambiente.cep
+
+= link_to 'Edit', edit_ambiente_path(@ambiente)
+\|
+= link_to 'Back', ambientes_path
