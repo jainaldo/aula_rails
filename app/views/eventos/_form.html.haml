@@ -1,0 +1,13 @@
+= simple_form_for(@evento) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :categoria
+    = f.input :data
+    = f.input :hora
+    = f.association :empresa , label_method: :nome
+    = f.association :ambiente, label_method: :nome
+    = f.input :descricao, label: 'Descrição'
+
+  .form-actions
+    = f.button :submit, 'Salvar'

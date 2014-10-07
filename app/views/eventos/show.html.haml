@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Categoria:
+  = @evento.categoria
+%p
+  %b Data:
+  = @evento.data
+%p
+  %b Hora:
+  = @evento.hora.strftime("%H:%M")
+%p
+  %b Empresa:
+  = @evento.empresa.nome
+%p
+  %b Ambiente:
+  = @evento.ambiente.nome
+%p
+  %b Descrição:
+  = @evento.descricao
+
+= link_to 'Edit', edit_evento_path(@evento)
+\|
+= link_to 'Back', eventos_path

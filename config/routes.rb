@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :eventos
+
   resources :clientes
 
   resources :ambientes
