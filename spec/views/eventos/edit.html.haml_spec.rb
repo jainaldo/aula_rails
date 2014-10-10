@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "eventos/edit", :type => :view do
   before(:each) do
     @evento = assign(:evento, Evento.create!(
+      :nome => "MyString",
       :categoria => "MyString",
       :empresa => nil,
       :ambiente => nil,
@@ -14,6 +15,8 @@ RSpec.describe "eventos/edit", :type => :view do
     render
 
     assert_select "form[action=?][method=?]", evento_path(@evento), "post" do
+
+      assert_select "input#evento_nome[name=?]", "evento[nome]"
 
       assert_select "input#evento_categoria[name=?]", "evento[categoria]"
 

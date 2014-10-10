@@ -2,9 +2,10 @@
 
 FactoryGirl.define do
   factory :evento do
+    nome "MyString"
     categoria "MyString"
-    data "2014-10-04"
-    hora "2014-10-04 22:20:27"
+    data "2014-10-09"
+    hora "2014-10-09 23:35:49"
     empresa nil
     ambiente nil
     descricao "MyText"

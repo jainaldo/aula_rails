@@ -2,6 +2,7 @@
 
 %table
   %tr
+    %th Nome
     %th Categoria
     %th Data
     %th Hora
@@ -14,6 +15,7 @@
 
   - @eventos.each do |evento|
     %tr
+      %td= evento.nome
       %td= evento.categoria
       %td= evento.data
       %td= evento.hora

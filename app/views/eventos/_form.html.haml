@@ -2,11 +2,12 @@
   = f.error_notification
 
   .form-inputs
+    = f.input :nome
     = f.input :categoria
     = f.input :data, as: :string
     = f.input :hora, as: :string
     = f.association :empresa , label_method: :nome
-    = f.association :ambiente, label_method: :nome
+    = f.association :ambiente , label_method: :nome
     = f.input :descricao, label: 'Descrição'
 
   .form-actions

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005012027) do
+ActiveRecord::Schema.define(version: 20141010023549) do
 
   create_table "ambientes", force: true do |t|
     t.string   "nome"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20141005012027) do
   end
 
   create_table "eventos", force: true do |t|
+    t.string   "nome"
     t.string   "categoria"
     t.date     "data"
     t.time     "hora"

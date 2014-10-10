@@ -47,6 +47,7 @@ feature 'gerenciar Evento' do
 
     def preencher_e_verificar_evento
 
+        fill_in 'Nome', :with => "Banda ao vivo"
         fill_in 'Categoria',  :with => "Categoria"
         fill_in 'Data', :with => "20/05/2014"
         fill_in 'Hora', :with => "20:00"
@@ -56,6 +57,7 @@ feature 'gerenciar Evento' do
 
         click_button 'Salvar'
 
+        expect(page).to have_content 'Nome: Banda ao vivo'
         expect(page).to have_content 'Categoria: Categoria'
         expect(page).to have_content 'Data: 2014-05-20'
         expect(page).to have_content 'Hora: 20:00'
