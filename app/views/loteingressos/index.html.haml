@@ -1,0 +1,23 @@
+%h1 Listing loteingressos
+
+%table
+  %tr
+    %th Preco
+    %th Quantidade
+    %th Evento
+    %th
+    %th
+    %th
+
+  - @loteingressos.each do |loteingresso|
+    %tr
+      %td= loteingresso.preco
+      %td= loteingresso.quantidade
+      %td= loteingresso.evento.nome
+      %td= link_to 'Show', loteingresso
+      %td= link_to 'Edit', edit_loteingresso_path(loteingresso)
+      %td= link_to 'Excluir', loteingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Loteingresso', new_loteingresso_path

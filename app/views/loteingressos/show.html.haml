@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Preço:
+  = @loteingresso.preco
+%p
+  %b Quantidade:
+  = @loteingresso.quantidade
+%p
+  %b Evento:
+  = @loteingresso.evento.nome
+
+= link_to 'Edit', edit_loteingresso_path(@loteingresso)
+\|
+= link_to 'Back', loteingressos_path

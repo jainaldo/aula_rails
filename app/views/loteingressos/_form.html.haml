@@ -1,0 +1,10 @@
+= simple_form_for(@loteingresso) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :preco, label: "Preço"
+    = f.input :quantidade
+    = f.association :evento, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

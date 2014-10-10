@@ -1,0 +1,2 @@
+module LoteingressosHelper
+end
