@@ -32,9 +32,7 @@ feature 'gerenciar Cliente' do
     def preencher_e_verificar_cliente
 
         fill_in 'Nome', :with => "Cliente"
-        select '2014', :from => "cliente_data_nascimento_1i"
-        select 'May', :from => "cliente_data_nascimento_2i"
-        select '20', :from => "cliente_data_nascimento_3i"
+        fill_in 'Data Nascimento', :with => "20/05/2014"
         fill_in 'CPF',  :with => "CPF"
         fill_in 'Email',  :with => "Email"
         fill_in 'Senha', :with => "Senha"

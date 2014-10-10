@@ -3,8 +3,8 @@
 
   .form-inputs
     = f.input :categoria
-    = f.input :data
-    = f.input :hora
+    = f.input :data, as: :string
+    = f.input :hora, as: :string
     = f.association :empresa , label_method: :nome
     = f.association :ambiente, label_method: :nome
     = f.input :descricao, label: 'Descrição'

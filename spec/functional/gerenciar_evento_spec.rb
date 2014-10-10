@@ -48,11 +48,8 @@ feature 'gerenciar Evento' do
     def preencher_e_verificar_evento
 
         fill_in 'Categoria',  :with => "Categoria"
-        select '2014', :from => "evento_data_1i"
-        select 'May', :from => "evento_data_2i"
-        select '20', :from => "evento_data_3i"
-        select '20', :from => "evento_hora_4i"
-        select '00', :from => "evento_hora_5i"
+        fill_in 'Data', :with => "20/05/2014"
+        fill_in 'Hora', :with => "20:00"
         select 'Ilha Azul', from: "Ambiente"
         select 'Show LTDA', from: "Empresa"
         fill_in 'Descrição', :with => "Descrição"
