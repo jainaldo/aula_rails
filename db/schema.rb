@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010030533) do
+ActiveRecord::Schema.define(version: 20141012210425) do
 
   create_table "ambientes", force: true do |t|
     t.string   "nome"
@@ -66,7 +66,20 @@ ActiveRecord::Schema.define(version: 20141010030533) do
   add_index "eventos", ["ambiente_id"], name: "index_eventos_on_ambiente_id"
   add_index "eventos", ["empresa_id"], name: "index_eventos_on_empresa_id"
 
+  create_table "ingressos", force: true do |t|
+    t.integer  "cadeira_numerada"
+    t.string   "area"
+    t.integer  "cliente_id"
+    t.integer  "loteingresso_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ingressos", ["cliente_id"], name: "index_ingressos_on_cliente_id"
+  add_index "ingressos", ["loteingresso_id"], name: "index_ingressos_on_loteingresso_id"
+
   create_table "loteingressos", force: true do |t|
+    t.integer  "numero_lote"
     t.float    "preco"
     t.integer  "quantidade"
     t.integer  "evento_id"

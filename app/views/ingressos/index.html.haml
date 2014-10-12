@@ -1,0 +1,25 @@
+%h1 Listing ingressos
+
+%table
+  %tr
+    %th Cadeira numerada
+    %th Area
+    %th Cliente
+    %th Loteingresso
+    %th
+    %th
+    %th
+
+  - @ingressos.each do |ingresso|
+    %tr
+      %td= ingresso.cadeira_numerada
+      %td= ingresso.area
+      %td= ingresso.cliente.nome
+      %td= ingresso.loteingresso.numero_lote
+      %td= link_to 'Show', ingresso
+      %td= link_to 'Edit', edit_ingresso_path(ingresso)
+      %td= link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ingresso', new_ingresso_path

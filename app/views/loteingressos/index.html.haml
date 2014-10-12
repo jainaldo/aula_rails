@@ -2,6 +2,7 @@
 
 %table
   %tr
+    %th Numero lote
     %th Preco
     %th Quantidade
     %th Evento
@@ -11,6 +12,7 @@
 
   - @loteingressos.each do |loteingresso|
     %tr
+      %td= loteingresso.numero_lote
       %td= loteingresso.preco
       %td= loteingresso.quantidade
       %td= loteingresso.evento.nome

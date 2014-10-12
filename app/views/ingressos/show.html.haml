@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Cadeira Númerada:
+  = @ingresso.cadeira_numerada
+%p
+  %b Área:
+  = @ingresso.area
+%p
+  %b Cliente:
+  = @ingresso.cliente.nome
+%p
+  %b Lote Ingresso:
+  = @ingresso.loteingresso.numero_lote
+
+= link_to 'Edit', edit_ingresso_path(@ingresso)
+\|
+= link_to 'Back', ingressos_path

@@ -2,9 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :preco, label: "Preço"
+    = f.input :numero_lote, label: "Número Lote"
+    = f.input :preco,  label: "Preço"
     = f.input :quantidade
-    = f.association :evento, label_method: :nome
+    = f.association :evento,  label_method: :nome
 
   .form-actions
     = f.button :submit, 'Salvar'

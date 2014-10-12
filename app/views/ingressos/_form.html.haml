@@ -1,0 +1,11 @@
+= simple_form_for(@ingresso) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cadeira_numerada, label: 'Cadeira Númerada'
+    = f.input :area, label: 'Área'
+    = f.association :cliente, label_method: :nome
+    = f.association :loteingresso, label_method: :numero_lote, label: 'Lote Ingresso'
+
+  .form-actions
+    = f.button :submit, 'Salvar'

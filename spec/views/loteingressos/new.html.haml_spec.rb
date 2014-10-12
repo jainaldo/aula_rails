@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "loteingressos/new", :type => :view do
   before(:each) do
     assign(:loteingresso, Loteingresso.new(
+      :numero_lote => 1,
       :preco => 1.5,
       :quantidade => 1,
       :evento => nil
@@ -13,6 +14,8 @@ RSpec.describe "loteingressos/new", :type => :view do
     render
 
     assert_select "form[action=?][method=?]", loteingressos_path, "post" do
+
+      assert_select "input#loteingresso_numero_lote[name=?]", "loteingresso[numero_lote]"
 
       assert_select "input#loteingresso_preco[name=?]", "loteingresso[preco]"
 

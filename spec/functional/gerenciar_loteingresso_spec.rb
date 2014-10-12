@@ -51,12 +51,14 @@ feature 'gerenciar Lote Ingresso' do
 
     def preencher_e_verificar_loteingresso
 
+        fill_in 'Número Lote', :with => "1"
         fill_in 'Preço',  :with => "20.0"
         fill_in 'Quantidade', :with => "10"
         select 'Banda ao vivo', from: "Evento"
 
         click_button 'Salvar'
 
+        expect(page).to have_content 'Número Lote: 1'
         expect(page).to have_content 'Preço: 20.0'
         expect(page).to have_content 'Quantidade: 10'
         expect(page).to have_content 'Evento: Banda ao vivo'

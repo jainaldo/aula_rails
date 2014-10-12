@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  root :to => "home#index"
+  resources :ingressos
 
   resources :loteingressos
+
+  get 'home/index'
+  root :to => "home#index"
 
   resources :eventos
 
