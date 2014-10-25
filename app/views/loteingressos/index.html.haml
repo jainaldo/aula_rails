@@ -1,25 +1,26 @@
 %h1 Listing loteingressos
 
-%table
-  %tr
-    %th Numero lote
-    %th Preco
-    %th Quantidade
-    %th Evento
-    %th
-    %th
-    %th
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Numero lote
+        %th Preco
+        %th Quantidade
+        %th Evento
+        %th{:colspan => 3} Ações
 
-  - @loteingressos.each do |loteingresso|
-    %tr
-      %td= loteingresso.numero_lote
-      %td= loteingresso.preco
-      %td= loteingresso.quantidade
-      %td= loteingresso.evento.nome
-      %td= link_to 'Show', loteingresso
-      %td= link_to 'Edit', edit_loteingresso_path(loteingresso)
-      %td= link_to 'Excluir', loteingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @loteingressos.each do |loteingresso|
+        %tr
+          %td= loteingresso.numero_lote
+          %td= loteingresso.preco
+          %td= loteingresso.quantidade
+          %td= loteingresso.evento.nome
+          %td
+            = link_to 'Show', loteingresso, class: 'btn btn-success'
+            = link_to 'Edit', edit_loteingresso_path(loteingresso), class: 'btn btn-primary'
+            = link_to 'Excluir', loteingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
 %br
 
-= link_to 'New Loteingresso', new_loteingresso_path
+= link_to 'New Loteingresso', new_loteingresso_path, class: 'btn btn-success'
