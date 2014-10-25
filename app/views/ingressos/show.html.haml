@@ -1,18 +1,26 @@
 %p#notice= notice
+%h1 Ingresso cadastrado
 
-%p
-  %b Cadeira Númerada:
-  = @ingresso.cadeira_numerada
-%p
-  %b Área:
-  = @ingresso.area
-%p
-  %b Cliente:
-  = @ingresso.cliente.nome
-%p
-  %b Lote Ingresso:
-  = @ingresso.loteingresso.numero_lote
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Cadeira Númerada:
+        %td
+          = @ingresso.cadeira_numerada
+      %tr
+        %th Área:
+        %td
+          = @ingresso.area
+      %tr
+        %th Cliente:
+        %td
+          = @ingresso.cliente.nome
+      %tr
+        %th Lote Ingresso:
+        %td
+          = @ingresso.loteingresso.numero_lote
 
-= link_to 'Edit', edit_ingresso_path(@ingresso)
+= link_to 'Edit', edit_ingresso_path(@ingresso), class: 'btn btn-info'
 \|
-= link_to 'Back', ingressos_path
+= link_to 'Back', ingressos_path, class: 'btn btn-default'
