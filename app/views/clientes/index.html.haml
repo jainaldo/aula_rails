@@ -1,27 +1,28 @@
 %h1 Listing clientes
 
-%table
-  %tr
-    %th Nome
-    %th Data nascimento
-    %th Cpf
-    %th Email
-    %th Senha
-    %th
-    %th
-    %th
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome
+        %th Data Nascimento
+        %th CPF
+        %th Email
+        %th Senha
+        %th{:colspan => 3} Ações
 
-  - @clientes.each do |cliente|
-    %tr
-      %td= cliente.nome
-      %td= cliente.data_nascimento
-      %td= cliente.cpf
-      %td= cliente.email
-      %td= cliente.senha
-      %td= link_to 'Show', cliente
-      %td= link_to 'Edit', edit_cliente_path(cliente)
-      %td= link_to 'Excluir', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @clientes.each do |cliente|
+        %tr
+          %td= cliente.nome
+          %td= cliente.data_nascimento
+          %td= cliente.cpf
+          %td= cliente.email
+          %td= cliente.senha
+          %td
+            = link_to 'Show', cliente , class: 'btn btn-success'
+            = link_to 'Edit', edit_cliente_path(cliente), class: 'btn btn-primary'
+            = link_to 'Excluir', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%br
+    %br
 
-= link_to 'New Cliente', new_cliente_path
+= link_to 'New Cliente', new_cliente_path, class: 'btn btn-success'

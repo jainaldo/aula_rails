@@ -1,21 +1,30 @@
 %p#notice= notice
+%h1 Cliente cadastrado
 
-%p
-  %b Nome:
-  = @cliente.nome
-%p
-  %b Data Nascimento:
-  = @cliente.data_nascimento
-%p
-  %b CPF:
-  = @cliente.cpf
-%p
-  %b Email:
-  = @cliente.email
-%p
-  %b Senha:
-  = @cliente.senha
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome:
+        %td
+          = @cliente.nome
+      %tr
+        %th Data Nascimento:
+        %td
+          = @cliente.data_nascimento
+      %tr
+        %th CPF:
+        %td
+          = @cliente.cpf
+      %tr
+        %th Email:
+        %td
+          = @cliente.email
+      %tr
+        %th Senha:
+        %td
+          = @cliente.senha
 
-= link_to 'Edit', edit_cliente_path(@cliente)
+= link_to 'Edit', edit_cliente_path(@cliente), class: 'btn btn-info'
 \|
-= link_to 'Back', clientes_path
+= link_to 'Back', clientes_path , class: 'btn btn-default'

@@ -1,4 +1,10 @@
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+body{
+    font-size: 15px !important;
+}
+
+.jumbotron{
+    margin-top: 85px !important;
+}
+.panel-default{
+    border-color: #428bca !important;
 }
