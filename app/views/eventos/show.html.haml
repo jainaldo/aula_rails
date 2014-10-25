@@ -1,27 +1,38 @@
 %p#notice= notice
+%h1 Cliente evento
 
-%p
-  %b Nome:
-  = @evento.nome
-%p
-  %b Categoria:
-  = @evento.categoria
-%p
-  %b Data:
-  = @evento.data
-%p
-  %b Hora:
-  = @evento.hora.strftime("%H:%M")
-%p
-  %b Empresa:
-  = @evento.empresa.nome
-%p
-  %b Ambiente:
-  = @evento.ambiente.nome
-%p
-  %b Descrição:
-  = @evento.descricao
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome:
+        %td
+          = @evento.nome
+      %tr
+        %th Categoria:
+        %td
+          = @evento.categoria
+      %tr
+        %th Data:
+        %td
+          = @evento.data
+      %tr
+        %th Hora:
+        %td
+          = @evento.hora.strftime("%H:%M")
+      %tr
+        %th Empresa:
+        %td
+          = @evento.empresa.nome
+      %tr
+        %th Ambiente:
+        %td
+          = @evento.ambiente.nome
+      %tr
+        %th Descrição:
+        %td
+          = @evento.descricao
 
-= link_to 'Edit', edit_evento_path(@evento)
+= link_to 'Edit', edit_evento_path(@evento), class: 'btn btn-info'
 \|
-= link_to 'Back', eventos_path
+= link_to 'Back', eventos_path, class: 'btn btn-default'

@@ -1,31 +1,33 @@
 %h1 Listing eventos
 
-%table
-  %tr
-    %th Nome
-    %th Categoria
-    %th Data
-    %th Hora
-    %th Empresa
-    %th Ambiente
-    %th Descricao
-    %th
-    %th
-    %th
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome
+        %th Categoria
+        %th Data
+        %th Hora
+        %th Empresa
+        %th Ambiente
+        %th Descricao
+        %th{:colspan => 3} Ações
 
-  - @eventos.each do |evento|
-    %tr
-      %td= evento.nome
-      %td= evento.categoria
-      %td= evento.data
-      %td= evento.hora
-      %td= evento.empresa.nome
-      %td= evento.ambiente.nome
-      %td= evento.descricao
-      %td= link_to 'Show', evento
-      %td= link_to 'Edit', edit_evento_path(evento)
-      %td= link_to 'Excluir', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @eventos.each do |evento|
+        %tr
+          %td= evento.nome
+          %td= evento.categoria
+          %td= evento.data
+          %td= evento.hora.strftime("%H:%M")
+          %td= evento.empresa.nome
+          %td= evento.ambiente.nome
+          %td= evento.descricao
+          %td
+            = link_to 'Show', evento, class: 'btn btn-success'
+            = link_to 'Edit', edit_evento_path(evento),class: 'btn btn-primary'
+            = link_to 'Excluir', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
 %br
 
-= link_to 'New Evento', new_evento_path
+= link_to 'New Evento', new_evento_path,  class: 'btn btn-success'
+
