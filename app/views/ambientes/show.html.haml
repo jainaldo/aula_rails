@@ -1,33 +1,46 @@
 %p#notice= notice
+%h1 Ambiente cadastrado
 
-%p
-  %b Nome:
-  = @ambiente.nome
-%p
-  %b Capacidade:
-  = @ambiente.capacidade
-%p
-  %b Endereço:
-  = @ambiente.endereco
-%p
-  %b Complemento:
-  = @ambiente.complemento
-%p
-  %b Número:
-  = @ambiente.numero
-%p
-  %b Bairro:
-  = @ambiente.bairro
-%p
-  %b Cidade:
-  = @ambiente.cidade
-%p
-  %b Estado:
-  = @ambiente.estado
-%p
-  %b CEP:
-  = @ambiente.cep
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome:
+        %td
+          = @ambiente.nome
+      %tr
+        %th Capacidade:
+        %td
+          = @ambiente.capacidade
+      %tr
+        %th Endereço:
+        %td
+          = @ambiente.endereco
+      %tr
+        %th Complemento:
+        %td
+          = @ambiente.complemento
+      %tr
+        %th Número:
+        %td
+          = @ambiente.numero
+      %tr
+        %th Bairro:
+        %td
+          = @ambiente.bairro
+      %tr
+        %th Cidade:
+        %td
+          = @ambiente.cidade
+      %tr
+        %th Estado:
+        %td
+          = @ambiente.estado
+      %tr
+        %th CEP:
+        %td
+          = @ambiente.cep
 
-= link_to 'Edit', edit_ambiente_path(@ambiente)
+= link_to 'Edit', edit_ambiente_path(@ambiente), class: 'btn btn-info'
 \|
-= link_to 'Back', ambientes_path
+= link_to 'Back', ambientes_path, class: 'btn btn-default'

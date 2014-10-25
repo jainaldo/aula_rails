@@ -1,35 +1,36 @@
 %h1 Listing ambientes
 
-%table
-  %tr
-    %th Nome
-    %th Capacidade
-    %th Endereco
-    %th Complemento
-    %th Numero
-    %th Bairro
-    %th Cidade
-    %th Estado
-    %th Cep
-    %th
-    %th
-    %th
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Nome
+        %th Capacidade
+        %th Endereco
+        %th Complemento
+        %th Numero
+        %th Bairro
+        %th Cidade
+        %th Estado
+        %th Cep
+        %th{:colspan => 3} Ações
 
-  - @ambientes.each do |ambiente|
-    %tr
-      %td= ambiente.nome
-      %td= ambiente.capacidade
-      %td= ambiente.endereco
-      %td= ambiente.complemento
-      %td= ambiente.numero
-      %td= ambiente.bairro
-      %td= ambiente.cidade
-      %td= ambiente.estado
-      %td= ambiente.cep
-      %td= link_to 'Show', ambiente
-      %td= link_to 'Edit', edit_ambiente_path(ambiente)
-      %td= link_to 'Excluir', ambiente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @ambientes.each do |ambiente|
+        %tr
+          %td= ambiente.nome
+          %td= ambiente.capacidade
+          %td= ambiente.endereco
+          %td= ambiente.complemento
+          %td= ambiente.numero
+          %td= ambiente.bairro
+          %td= ambiente.cidade
+          %td= ambiente.estado
+          %td= ambiente.cep
+          %td
+            = link_to 'Show', ambiente, class: 'btn btn-success'
+            = link_to 'Edit', edit_ambiente_path(ambiente), class: 'btn btn-primary'
+            = link_to 'Excluir', ambiente, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
 %br
 
-= link_to 'New Ambiente', new_ambiente_path
+= link_to 'New Ambiente', new_ambiente_path, class: 'btn btn-success'
