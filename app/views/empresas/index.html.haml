@@ -1,35 +1,36 @@
 %h1 Listing empresas
 
-%table
-  %tr
-    %th Cnpj
-    %th Nome
-    %th Endereco
-    %th Complemento
-    %th Numero
-    %th Bairro
-    %th Cidade
-    %th Estado
-    %th Cep
-    %th
-    %th
-    %th
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th Cnpj
+        %th Nome
+        %th Endereco
+        %th Complemento
+        %th Número
+        %th Bairro
+        %th Cidade
+        %th Estado
+        %th Cep
+        %th{:colspan => 3} Ações
 
-  - @empresas.each do |empresa|
-    %tr
-      %td= empresa.cnpj
-      %td= empresa.nome
-      %td= empresa.endereco
-      %td= empresa.complemento
-      %td= empresa.numero
-      %td= empresa.bairro
-      %td= empresa.cidade
-      %td= empresa.estado
-      %td= empresa.cep
-      %td= link_to 'Show', empresa
-      %td= link_to 'Edit', edit_empresa_path(empresa)
-      %td= link_to 'Excluir', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @empresas.each do |empresa|
+        %tr
+          %td= empresa.cnpj
+          %td= empresa.nome
+          %td= empresa.endereco
+          %td= empresa.complemento
+          %td= empresa.numero
+          %td= empresa.bairro
+          %td= empresa.cidade
+          %td= empresa.estado
+          %td= empresa.cep
+          %td
+            = link_to 'Show', empresa,  class: 'btn btn-success'
+            = link_to 'Edit', edit_empresa_path(empresa), class: 'btn btn-primary'
+            = link_to 'Excluir', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
 %br
 
-= link_to 'New Empresa', new_empresa_path
+= link_to 'New Empresa', new_empresa_path, class: 'btn btn-success'

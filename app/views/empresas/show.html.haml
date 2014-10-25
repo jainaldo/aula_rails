@@ -1,33 +1,46 @@
 %p#notice= notice
+%h1 Cliente empresa
 
-%p
-  %b CNPJ:
-  = @empresa.cnpj
-%p
-  %b Nome:
-  = @empresa.nome
-%p
-  %b Endereço:
-  = @empresa.endereco
-%p
-  %b Complemento:
-  = @empresa.complemento
-%p
-  %b Número:
-  = @empresa.numero
-%p
-  %b Bairro:
-  = @empresa.bairro
-%p
-  %b Cidade:
-  = @empresa.cidade
-%p
-  %b Estado:
-  = @empresa.estado
-%p
-  %b CEP:
-  = @empresa.cep
+.panel.panel-default
+  .panel-body
+    %table.table.table-striped.table-hover
+      %tr
+        %th CNPJ:
+        %td
+          = @empresa.cnpj
+      %tr
+        %th Nome:
+        %td
+          = @empresa.nome
+      %tr
+        %th Endereço:
+        %td
+          = @empresa.endereco
+      %tr
+        %th Complemento:
+        %td
+          = @empresa.complemento
+      %tr
+        %th Número:
+        %td
+          = @empresa.numero
+      %tr
+        %th Bairro:
+        %td
+          = @empresa.bairro
+      %tr
+        %th Cidade:
+        %td
+          = @empresa.cidade
+      %tr
+        %th Estado:
+        %td
+          = @empresa.estado
+      %tr
+        %th CEP:
+        %td
+          = @empresa.cep
 
-= link_to 'Edit', edit_empresa_path(@empresa)
+= link_to 'Edit', edit_empresa_path(@empresa), class: 'btn btn-info'
 \|
-= link_to 'Back', empresas_path
+= link_to 'Back', empresas_path, class: 'btn btn-default'
