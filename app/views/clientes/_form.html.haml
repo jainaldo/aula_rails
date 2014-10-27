@@ -6,7 +6,7 @@
       = f.input :data_nascimento, label: 'Data Nascimento', as: :string
       = f.input :cpf , label: 'CPF'
       = f.input :email
-      = f.input :senha
+      = f.input :senha, as: :password
   .form-group.form-actions
     .col-lg-10.col-lg-offset-2
       = f.button :submit, 'Salvar', :class => "btn btn-success"
