@@ -1,7 +1,11 @@
 %p#notice= notice
-%h1 Ingresso cadastrado
-
-.panel.panel-primary
+.panel.panel-red
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-ticket.fa-5x
+      .col-xs-9.text-right
+        %h1 Ingresso cadastrado
   .panel-body
     %table.table.table-hover
       %tr
@@ -21,6 +25,6 @@
         %td
           = @ingresso.loteingresso.numero_lote
 
-= link_to 'Edit', edit_ingresso_path(@ingresso), class: 'btn btn-info'
-\|
-= link_to 'Back', ingressos_path, class: 'btn btn-default'
+    = link_to 'Edit', edit_ingresso_path(@ingresso), class: 'btn btn-info'
+    \|
+    = link_to 'Back', ingressos_path, class: 'btn btn-default'

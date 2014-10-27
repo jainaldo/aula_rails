@@ -1,7 +1,14 @@
-%h1 Editing loteingresso
+.panel.panel-green
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-tags.fa-5x
+      .col-xs-9.text-right
+        %h1 Editing loteingresso
+  .panel-body
 
-= render 'form'
+    = render 'form'
 
-= link_to 'Show', @loteingresso, class: 'btn btn-info'
-\|
-= link_to 'Back', loteingressos_path, class: 'btn btn-default'
+    = link_to 'Show', @loteingresso, class: 'btn btn-info'
+    \|
+    = link_to 'Back', loteingressos_path, class: 'btn btn-default'

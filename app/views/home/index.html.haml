@@ -1,12 +1,70 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
-%div.row
-  %div.col-lg-4
-    %div.panel.panel-default
-      %div.panel-body
-        %h3 Basic panel
-%div.row
-  %div.col-lg-4
-    %div.panel.panel-default
-      %div.panel-body
-        %h3 Basic panel
+%h1 Venda de Ingressos
+
+.row
+  .col-sm-6.col-md-4
+    .panel.panel-primary
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-music.fa-5x
+          .col-xs-9.text-right
+            %h2 Evento
+      .panel-footer
+        = link_to 'Eventos', eventos_path, class: 'btn btn-primary'
+        = link_to 'New evento', new_evento_path, class: 'btn btn-success'
+  .col-sm-6.col-md-4
+    .panel.panel-yellow
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-tasks.fa-5x
+          .col-xs-9.text-right
+            %h2 Empresa
+      .panel-footer
+        = link_to 'Empresas', empresas_path, class: 'btn btn-primary'
+        = link_to 'New empresa', new_empresa_path, class: 'btn btn-success'
+  .col-sm-6.col-md-4
+    .panel.panel-red
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-map-marker.fa-5x
+          .col-xs-9.text-right
+            %h2 Ambiente
+      .panel-footer
+        = link_to 'Ambientes', ambientes_path, class: 'btn btn-primary'
+        = link_to 'New ambiente', new_ambiente_path, class: 'btn btn-success'
+  .col-sm-6.col-md-4
+    .panel.panel-green
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-tags.fa-5x
+          .col-xs-9.text-right
+            %h2 Lote Ingresso
+      .panel-footer
+        = link_to 'Lote Ingressos', loteingressos_path, class: 'btn btn-primary'
+        = link_to 'New Lote ingressos ', new_loteingresso_path, class: 'btn btn-success'
+  .col-sm-6.col-md-4
+    .panel.panel-red
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-ticket.fa-5x
+          .col-xs-9.text-right
+            %h2 Ingresso
+      .panel-footer
+        = link_to 'Ingressos', ingressos_path, class: 'btn btn-primary'
+        = link_to 'New ingressos ', new_ingresso_path, class: 'btn btn-success'
+  .col-sm-6.col-md-4
+    .panel.panel-primary
+      .panel-heading
+        .row
+          .col-xs-3
+            %i.fa.fa-users.fa-5x
+          .col-xs-9.text-right
+            %h2 Cliente
+      .panel-footer
+        = link_to 'Clientes', clientes_path, class: 'btn btn-primary'
+        = link_to 'New Cliente ', new_cliente_path, class: 'btn btn-success'
+

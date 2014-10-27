@@ -85,6 +85,8 @@ GEM
     faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.5)
+    font-awesome-less (4.0.2)
+      less-rails (>= 2.4.2)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -267,6 +269,7 @@ DEPENDENCIES
   exception_notification (~> 4.0.1)
   factory_girl_rails (~> 4.4.1)
   faker
+  font-awesome-less
   haml-rails (~> 0.5.3)
   inherited_resources (~> 1.5.0)
   jbuilder (~> 1.2)

@@ -1,7 +1,11 @@
 %p#notice= notice
-%h1 Empresa cadastrado
-
-.panel.panel-primary
+.panel.panel-yellow
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-tasks.fa-5x
+      .col-xs-9.text-right
+        %h1 Empresa cadastrado
   .panel-body
     %table.table.table-hover
       %tr
@@ -41,6 +45,6 @@
         %td
           = @empresa.cep
 
-= link_to 'Edit', edit_empresa_path(@empresa), class: 'btn btn-info'
-\|
-= link_to 'Back', empresas_path, class: 'btn btn-default'
+    = link_to 'Edit', edit_empresa_path(@empresa), class: 'btn btn-info'
+    \|
+    = link_to 'Back', empresas_path, class: 'btn btn-default'

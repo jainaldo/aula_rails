@@ -1,7 +1,12 @@
 %p#notice= notice
-%h1 Ambiente cadastrado
 
-.panel.panel-primary
+.panel.panel-red
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-map-marker.fa-5x
+      .col-xs-9.text-right
+        %h1 Ambiente cadastrado
   .panel-body
     %table.table.table-hover
       %tr
@@ -41,6 +46,6 @@
         %td
           = @ambiente.cep
 
-= link_to 'Edit', edit_ambiente_path(@ambiente), class: 'btn btn-info'
-\|
-= link_to 'Back', ambientes_path, class: 'btn btn-default'
+    = link_to 'Edit', edit_ambiente_path(@ambiente), class: 'btn btn-info'
+    \|
+    = link_to 'Back', ambientes_path, class: 'btn btn-default'

@@ -1,6 +1,10 @@
-%h1 Listing empresas
-
-.panel.panel-primary
+.panel.panel-yellow
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-tasks.fa-5x
+      .col-xs-9.text-right
+        %h1 Listing empresas
   .panel-body
     %table.table.table-hover
       %tr
@@ -31,6 +35,6 @@
             = link_to 'Edit', edit_empresa_path(empresa), class: 'btn btn-primary'
             = link_to 'Excluir', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%br
+    %br
 
-= link_to 'New Empresa', new_empresa_path, class: 'btn btn-success'
+    = link_to 'New Empresa', new_empresa_path, class: 'btn btn-success'

@@ -1,6 +1,10 @@
-%h1 Listing ambientes
-
-.panel.panel-primary
+.panel.panel-red
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-map-marker.fa-5x
+      .col-xs-9.text-right
+        %h1 Listing ambientes
   .panel-body
     %table.table.table-hover
       %tr
@@ -31,6 +35,6 @@
             = link_to 'Edit', edit_ambiente_path(ambiente), class: 'btn btn-primary'
             = link_to 'Excluir', ambiente, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%br
+    %br
 
-= link_to 'New Ambiente', new_ambiente_path, class: 'btn btn-success'
+    = link_to 'New Ambiente', new_ambiente_path, class: 'btn btn-success'

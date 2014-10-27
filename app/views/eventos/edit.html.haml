@@ -1,7 +1,13 @@
-%h1 Editing evento
+.panel.panel-primary
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-music.fa-5x
+      .col-xs-9.text-right
+        %h1 Editing evento
+  .panel-body
+    = render 'form'
 
-= render 'form'
-
-= link_to 'Show', @evento, class: 'btn btn-info'
-\|
-= link_to 'Back', eventos_path, class: 'btn btn-default'
+    = link_to 'Show', @evento, class: 'btn btn-info'
+    \|
+    = link_to 'Back', eventos_path, class: 'btn btn-default'

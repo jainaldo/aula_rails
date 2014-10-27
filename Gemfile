@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'less', '~> 2.5.0'
 gem 'less-rails', '~> 2.5.0'
+gem 'font-awesome-less'
 
 gem 'devise', '~> 3.3.0'
 gem 'cancancan', '~> 1.9.2'

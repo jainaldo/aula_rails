@@ -1,7 +1,11 @@
 %p#notice= notice
-%h1 Cliente cadastrado
-
 .panel.panel-primary
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-users.fa-5x
+      .col-xs-9.text-right
+        %h1 Cliente cadastrado
   .panel-body
     %table.table.table-hover
       %tr
@@ -25,6 +29,6 @@
         %td
           = @cliente.senha
 
-= link_to 'Edit', edit_cliente_path(@cliente), class: 'btn btn-info'
-\|
-= link_to 'Back', clientes_path , class: 'btn btn-default'
+    = link_to 'Edit', edit_cliente_path(@cliente), class: 'btn btn-info'
+    \|
+    = link_to 'Back', clientes_path , class: 'btn btn-default'

@@ -1,7 +1,13 @@
-%h1 Editing ingresso
+.panel.panel-red
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-ticket.fa-5x
+      .col-xs-9.text-right
+        %h1 Editing ingresso
+  .panel-body
+    = render 'form'
 
-= render 'form'
-
-= link_to 'Show', @ingresso, class: 'btn btn-info'
-\|
-= link_to 'Back', ingressos_path,  class: 'btn btn-default'
+    = link_to 'Show', @ingresso, class: 'btn btn-info'
+    \|
+    = link_to 'Back', ingressos_path,  class: 'btn btn-default'

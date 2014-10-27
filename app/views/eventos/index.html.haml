@@ -1,6 +1,10 @@
-%h1 Listing eventos
-
 .panel.panel-primary
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-music.fa-5x
+      .col-xs-9.text-right
+        %h1 Listing eventos
   .panel-body
     %table.table.table-hover
       %tr
@@ -27,7 +31,7 @@
             = link_to 'Edit', edit_evento_path(evento),class: 'btn btn-primary'
             = link_to 'Excluir', evento, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%br
+    %br
 
-= link_to 'New Evento', new_evento_path,  class: 'btn btn-success',role: "button"
+    = link_to 'New Evento', new_evento_path,  class: 'btn btn-success',role: "button"
 

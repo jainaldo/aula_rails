@@ -1,7 +1,12 @@
 %p#notice= notice
-%h1 Evento cadastrado
 
 .panel.panel-primary
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-music.fa-5x
+      .col-xs-9.text-right
+        %h1 Evento cadastrado
   .panel-body
     %table.table.table-hover
       %tr
@@ -33,6 +38,6 @@
         %td
           = @evento.descricao
 
-= link_to 'Edit', edit_evento_path(@evento), class: 'btn btn-info'
-\|
-= link_to 'Back', eventos_path, class: 'btn btn-default'
+    = link_to 'Edit', edit_evento_path(@evento), class: 'btn btn-info'
+    \|
+    = link_to 'Back', eventos_path, class: 'btn btn-default'

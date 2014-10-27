@@ -1,7 +1,14 @@
-%h1 Editing cliente
+.panel.panel-primary
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-users.fa-5x
+      .col-xs-9.text-right
+        %h1 Editing cliente
+  .panel-body
 
-= render 'form'
+    = render 'form'
 
-= link_to 'Show', @cliente, class: 'btn btn-info'
-\|
-= link_to 'Back', clientes_path, class: 'btn btn-default'
+    = link_to 'Show', @cliente, class: 'btn btn-info'
+    \|
+    = link_to 'Back', clientes_path, class: 'btn btn-default'

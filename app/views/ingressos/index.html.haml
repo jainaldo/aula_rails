@@ -1,6 +1,10 @@
-%h1 Listing ingressos
-
-.panel.panel-primary
+.panel.panel-red
+  .panel-heading
+    .row
+      .col-xs-3
+        %i.fa.fa-ticket.fa-5x
+      .col-xs-9.text-right
+        %h1 Listing ingressos
   .panel-body
     %table.table.table-hover
       %tr
@@ -21,7 +25,7 @@
             = link_to 'Edit', edit_ingresso_path(ingresso), class: 'btn btn-primary'
             = link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%br
+    %br
 
-= link_to 'New Ingresso', new_ingresso_path, class: 'btn btn-success'
+    = link_to 'New Ingresso', new_ingresso_path, class: 'btn btn-success'
 
